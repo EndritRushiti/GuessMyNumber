@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/question_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/sixteen_dp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/thirty_five_sp" />
+
+    <TextView
+        android:id="@+id/result_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/yourNumberIs"
+        android:textColor="@color/green"
+        android:textSize="@dimen/thirty_five_sp"
+        android:visibility="invisible" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/reset_btn"
+        android:layout_marginLeft="@dimen/eight_dp"
+        android:layout_marginRight="@dimen/eight_dp"
+        android:layout_marginBottom="@dimen/thirty_five_dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/background_circle_blue"
+            android:contentDescription="@string/arrow_down"
+            android:onClick="clickDownArrow"
+            app:srcCompat="@drawable/ic_arrow_downward_24" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/background_circle_pink"
+            android:contentDescription="@string/success"
+            android:onClick="clickSuccess"
+            app:srcCompat="@drawable/ic_check" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/background_circle_blue"
+            android:contentDescription="@string/arrow_up"
+            android:onClick="clickUpArrow"
+            app:srcCompat="@drawable/ic_baseline_arrow_upward_24" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/reset_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fifty_dp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/eight_dp"
+        android:background="@color/colorPurple"
+        android:onClick="clickResetButton"
+        android:text="@string/str_reset"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+</RelativeLayout>
